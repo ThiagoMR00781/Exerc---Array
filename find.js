@@ -1,20 +1,15 @@
 const find = (arr, callback) => {
-    const procurar = arr.find(p => p.startsWith('P'))
-    callback(procurar)
+    for(let i = 0; i < arr.length; i++) {
+        if (arr[i] < 5)
+        callback(arr[i])
+    }
 }
 
-const marcasCarro = [
-    "BMW",
-    "Porsche",
-    "Nissan",
-    "Volkswagen",
-    "Fiat",
-    "Pagani"
-]
+const x = [1, 2, 3, 4, 5, 6, 8, 9, 10]
 
-const exibir = (procura) => {
-    document.write("O carro que começa com letra P é " + procura)
+const exibir = (valor) => {
+    document.write(valor + " ")
 }
 
-find(marcasCarro, exibir);
+find(x, exibir);
 
